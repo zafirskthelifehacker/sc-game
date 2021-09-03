@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Covid 19 Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background: #106eea;
+        }
+
+        .centerHorizontal {
+            padding: 150px;
+            top: 25%;
+            margin: 0 auto;
+            width: 80%
+        }
+
+        @media screen and (max-width: 1200px) {
+            .centerHorizontal {
+                padding: 10px;
+                padding-top: 150px;
+                top: 25%;
+                margin: 0 auto;
+                width: 80%
+            }
+        }
+
+        .form-group::placeholder {
+            color: #106eea;
+        }
+
+        #continueButton {
+            background: white;
+            color: #106eea;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container centerHorizontal">
+        <div>
+            <img src="assets/img/logo.png" style="width: 100px; padding: 10px" />
+            <br>
+            <form>
+                <div class="form-group">
+                    <input class="form-control" id="nameInput" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="ageInput" placeholder="Age">
+                </div>
+                <script>
+                    function moveDataBetweenPage() {
+                        sessionStorage.setItem("name", document.getElementById('nameInput').value);
+                        sessionStorage.setItem("age", document.getElementById('ageInput').value);
+                        location.href = "game.html";
+                    }
+                </script>
+                <button id="continueButton" type="button" class="btn btn-info btn-lg"
+                    style="background: white; color: #106eea" onclick="moveDataBetweenPage()">Continue</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

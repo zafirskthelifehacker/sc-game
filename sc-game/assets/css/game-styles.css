@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+}
+#tips2{
+    margin-top: 10px;
+}
+#game{
+    min-width: 300px;
+    max-width: 300px;
+    height: 500px;
+    border: 5px solid black;
+    margin: auto;
+    box-sizing: border-box;
+    background: white;
+}
+#score{
+    position: absolute;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+#level{
+    position: absolute;
+    top: 20vh;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+#character{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    
+    top: 300px;
+    left: 100px;
+}
+#hidden-game{
+    top: 600px;
+    z-index: 100;
+    position: absolute;
+    width: 300px;
+    height: 130px;
+    background-color: #106eea;
+}
+#block{
+    width: 100px;
+    height: 100px;
+    top: 500px;
+    position: relative; 
+    animation: slide 2s infinite linear;
+}
+
+#block img{
+    width: 100px;
+}
+
+
+
+
+#character img{
+    width: 100px;
+}
+@keyframes slide{
+    0%{top:-100px};
+    1000%{top:500px};
+}
+
+
+#left, #right{
+    width:50%;
+    position: absolute;
+    height: 500px;
+}
+#right{
+    left: 50%;
+}
